@@ -1,0 +1,27 @@
+{% extends 'books/base.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% block title %}
+    Books
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'books/style.css' %}" />
+    {% bootstrap_css %}
+    {% if books %}
+        <div class="container">
+            <div class="row">
+                {% for book in books %}
+                <div class="col-md-4 main">
+                <a href={%url 'detail' book.id %}>
+                <img src="../static/books/media/{{book.imageID}}.jpg">
+                </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% else %}
+        <p>No books available.</p>
+    {% endif %}
+{% endblock %}

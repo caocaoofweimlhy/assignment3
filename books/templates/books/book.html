@@ -1,0 +1,25 @@
+{% extends 'books/base.html' %}
+{% load staticfiles %}
+{% load bootstrap3 %}
+
+{% block title %}
+    {{book.title}}
+{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" type="text/css" href="{% static 'books/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'books/book.css' %}" />
+    {% bootstrap_css %}
+    <div class='content'>
+        <img src="../static/books/media/{{book.imageID}}.jpg"> <br /> <br />
+        Title: {{book.title}} <br /> <br />
+        Description: {{book.content}}<br/> <br />
+        Author: {{book.author}}<br/> <br />
+        Genre(s):
+        <ul>
+            {% for t in book.genre.all %}
+                <li>{{t.title}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

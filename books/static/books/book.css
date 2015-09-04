@@ -1,0 +1,11 @@
+.content{
+    float:left;
+    margin-left:10%;
+    max-width:80%;
+}
+p{
+    font-size:18px;
+}
+li{
+    font-size:18px;
+}

@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+* { box-sizing:border-box; }
+body { background:url(media/little_pluses.png) #cacaca; margin:30px; }
+
+.gallery  { 
+	display: block;
+	padding:25px 25px 40px;
+	margin:0 auto 20px auto;
+	width:100%;
+	height:auto;
+	min-height:250px;
+	font:20px 'Gloria Hallelujah', cursive; 
+	line-height:1.5;
+	border:0;
+	border-radius: 3px;
+	background: -webkit-linear-gradient(#F9EFAF, #F7E98D);
+	background: -moz-linear-gradient(#F9EFAF, #F7E98D);
+	background: -o-linear-gradient(#F9EFAF, #F7E98D);
+	background: -ms-linear-gradient(#F9EFAF, #F7E98D);
+	background: linear-gradient(#F9EFAF, #F7E98D);
+	box-shadow:0 4px 6px rgba(0,0,0,0.1);
+	overflow:hidden;
+	transition:box-shadow 0.5s ease;
+	font-smoothing:subpixel-antialiased;
+	max-width:520px;
+
+}
+
+a:link{
+    	text-decoration: None;
+}
+
+textarea:hover { box-shadow:0 5px 8px rgba(0,0,0,0.15); }
+textarea:focus { box-shadow:0 5px 12px rgba(0,0,0,0.2); outline:none; }
+
+.main > a{
+	color:black;
+}
+
+.main > a:hover{
+	text-decoration: None;
+	color: black;
+}
+
+.container{
+	margin-top:20px;
+}
+
+/*.container img{
+	max-height:100%;
+	max-width:100%;
+}*/
+
+img{
+	margin-top:20px;
+}

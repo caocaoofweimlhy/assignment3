@@ -1,0 +1,22 @@
+{% extends 'books/base.html' %}
+{% load crispy_forms_tags %}
+{% load bootstrap3 %}
+
+{% block title %}
+    Create Book
+{% endblock %}
+{% block content %}
+{% bootstrap_css %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            {% if object %}
+                <h1>Update {{object.title}}</h1>
+            {% else %}
+                <h1>Create a New Book</h1>
+            {% endif %}
+            {% crispy form %}
+	    </div>
+    </div>
+</div>
+{% endblock %}
